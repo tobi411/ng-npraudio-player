@@ -6,10 +6,19 @@ var nprUrl = 'http://api.npr.org/query?id=61&fields=relatedLink,title,byline,tex
 app.controller('PlayerController', ['$scope', '$http', function($scope,$http){
 	$scope.playing = false;
 	$scope.audio = document.createElement('audio');
-	$scope.audio.src = './media/cartman-InGhetto.mp3';
-	$scope.play = function(){
-		$scope.audio.play();
-		$scope.playing = true;
+	// $scope.audio.src = './media/cartman-InGhetto.mp3';
+	$scope.play = function(program){
+		if($scope.playing)
+		{
+			console.log("playing");
+			$scope.audio.pause;
+			$scope.playing = false;
+		}else{
+			var url = program.audio[0].format.mp4.$text;
+			$scope.audio.src = url;
+			$scope.audio.play();
+			$scope.playing = true;
+		}		
 	};
 	$scope.stop = function(){
 		$scope.audio.pause();
@@ -17,7 +26,6 @@ app.controller('PlayerController', ['$scope', '$http', function($scope,$http){
 	};
 	$scope.audio.addEventListener('ended', function(){
 		$scope.$apply(function(){
-			console.log("stopping");
 			$scope.stop();
 		});
 	});
