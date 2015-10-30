@@ -5,16 +5,19 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/custom.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		
 		<script src="js/main.js"></script>
+
+		<script src="js/controllers/PlayerController.js"></script>
+
 		<script src="js/directives/nprLink.js"></script>
 	</head>
 	<body>
 		<div ng-controller="PlayerController" class="row">
 			<div class="container">
-				<div class="col-md-8 col-md-offset-2" id="content">
+				<div class="col-md-9 col-md-offset-2" id="content">
 					<ul id="programs_list" class="">
 					  <li ng-repeat="program in shows">
-					    <!-- <span class="large-12">{{ program.title.$text }}</span> -->
 					    <span npr-link play='play(program)' stop='stop(program)' ng-model="program"></span>
 					  </li>
 					</ul>

@@ -17,9 +17,9 @@ li{
 	padding-top: 7px;
 	margin-bottom: 3px;
 
--webkit-box-shadow: 3px -3px 5px -1px rgba(255,127,80,0.66);
--moz-box-shadow: 3px -3px 5px -1px rgba(255,127,80,0.66);
-box-shadow: 3px -3px 5px -1px rgba(255,127,80,0.66);
+-webkit-box-shadow: 3px -3px 5px -1px rgba(255,127,80,0.3);
+-moz-box-shadow: 3px -3px 5px -1px rgba(255,127,80,0.3);
+box-shadow: 3px -3px 5px -1px rgba(255,127,80,0.3);
 }
 
 #content{
@@ -36,4 +36,8 @@ i{
 
 span.stop{
 	margin-left: 20px;
+}
+
+.link-to-show{
+	font-size: 1.1rem;
 }
