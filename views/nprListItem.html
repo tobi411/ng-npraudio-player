@@ -2,12 +2,12 @@
   <div class="container">
       <div class="stationRow">
           <div class="col-md-1">
-            <span ng-click="play(ngModel)" ng-show="!playing" class="play-pause"><i class="fa fa-play"></i></span>
-            <span ng-click="play(ngModel)" ng-show="playing" class="play-pause"><i class="fa fa-pause"></i></span>
-            <span ng-click="play(ngModel)" class="stop"><i class="fa fa-stop"></i></span>            
+            <span ng-click="play(ngModel.show_audio)" ng-show="!(ngModel.show_playing)" class="play-pause"><i class="fa fa-play"></i></span>
+            <span ng-click="play(ngModel.show_audio)" ng-show="(ngModel.show_playing)" class="play-pause"><i class="fa fa-pause"></i></span>
+            <span ng-click="stop(ngModel.show_audio)" class="stop"><i class="fa fa-stop"></i></span>            
           </div>
           <div class="col-md-5">
-            <p class="">{{ ngModel.title.$text }}</p>
+            <p class="">{{ ngModel.show_audio.title.$text }}</p>
           </div>
           <div class="col-md-1">
             <p class=""><a href="{{ ngModel.link[0].$text }}">Link</a></p>

@@ -12,15 +12,12 @@
 		<div ng-controller="PlayerController" class="row">
 			<div class="container">
 				<div class="col-md-8 col-md-offset-2" id="content">
-					<!-- {{ programs }} -->
 					<ul id="programs_list" class="">
-					  <li ng-repeat="program in programs">
+					  <li ng-repeat="program in shows">
 					    <!-- <span class="large-12">{{ program.title.$text }}</span> -->
-					    <span npr-link play='play(program)' ng-model="program"></span>
+					    <span npr-link play='play(program)' stop='stop(program)' ng-model="program"></span>
 					  </li>
 					</ul>
-					<button ng-click="play()" class="button" ng-show="!playing">Play</button>
-					<button ng-click="stop()" class="button alert" ng-show="playing">Stop</button>	
 					<p>Playing audio: <b>{{ playing }}</b></p>		
 				</div>
 			</div>

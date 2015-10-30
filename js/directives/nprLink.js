@@ -5,11 +5,12 @@ app.directive('nprLink', function() {
     replace: true,
     scope: {
       ngModel: '=',
-      play: '&'
+      play: '&',
+      stop: '&'
     },
     templateUrl: './views/nprListItem.html',
     link: function(scope, ele, attr) {
-      scope.duration = scope.ngModel.audio[0].duration.$text;
+      scope.duration = scope.ngModel.show_audio.audio[0].duration.$text;
     }
   }
 });
