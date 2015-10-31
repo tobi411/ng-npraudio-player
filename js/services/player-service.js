@@ -4,6 +4,7 @@ app.factory('player',['audio', '$rootScope', function(audio, $rootScope){
 		ready: false,
 		current: null,
 		play: function(program){
+			console.log(program.show_audio);
 			if(player.playing)
 				player.stop(program);
 			else{

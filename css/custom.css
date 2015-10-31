@@ -3,9 +3,13 @@ p{
 	font-weight: bold;
 }
 
+h1{
+	color: #efefef;
+	margin-bottom: 2em;
+}
+
 body{
 	background-color: #191919;
-	margin: 0 auto;
 }
 
 #programs_list{
@@ -23,7 +27,7 @@ box-shadow: 3px -3px 5px -1px rgba(255,127,80,0.3);
 }
 
 #content{
-	margin-top: 17em;
+	margin-top: 6em;
 }
 
 a{

@@ -22,7 +22,8 @@
 	<body>
 		<div ng-controller="PlayerController" class="row">
 			<div class="container">
-				<div class="col-md-9 col-md-offset-2" id="content">
+				<div class="col-md-9 col-md-offset-1" id="content">
+					<h1 class="text-center">Science Friday</h1>
 					<ul id="programs_list" class="">
 					  <li ng-repeat="program in shows">
 					    <span npr-link play='player.play(program)' stop='player.stop(program)' ng-model="program"></span>
