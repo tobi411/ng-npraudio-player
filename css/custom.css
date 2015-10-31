@@ -41,3 +41,17 @@ span.stop{
 .link-to-show{
 	font-size: 1.1rem;
 }
+
+
+#related-header{
+	color: #efefef;
+}
+
+#related{
+	list-style: none;
+}
+
+#related li{
+	background: none;
+	box-shadow: none;
+}

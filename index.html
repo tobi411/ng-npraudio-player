@@ -8,7 +8,14 @@
 		
 		<script src="js/main.js"></script>
 
+		<!-- Controllers -->
 		<script src="js/controllers/PlayerController.js"></script>
+		<script src="js/controllers/RelatedController.js"></script>
+
+		<!-- Services -->
+		<script src="js/services/npr-service.js"></script>
+		<script src="js/services/audio-service.js"></script>
+		<script src="js/services/player-service.js"></script>
 
 		<script src="js/directives/nprLink.js"></script>
 	</head>
@@ -18,12 +25,21 @@
 				<div class="col-md-9 col-md-offset-2" id="content">
 					<ul id="programs_list" class="">
 					  <li ng-repeat="program in shows">
-					    <span npr-link play='play(program)' stop='stop(program)' ng-model="program"></span>
+					    <span npr-link play='player.play(program)' stop='player.stop(program)' ng-model="program"></span>
 					  </li>
 					</ul>
-					<p>Playing audio: <b>{{ playing }}</b></p>		
 				</div>
 			</div>
+		</div>
+		<div ng-controller="RelatedController" class="row">
+			<div class="container">
+				<div class="col-md-9 col-md-offset-2">
+					<h3 id="related-header">Related content</h3>
+				    <ul id="related">
+				    	<li ng-repeat="s in related"><a href="{{ s.link }}">{{ s.caption }}</a></li>
+				    </ul>
+			    </div>
+		    </div>
 		</div>
 	</body>
 </html>
